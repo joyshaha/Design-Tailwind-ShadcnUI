@@ -9,7 +9,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/tranzo" element={<TranzoLandingPage />} />
-        <Route path="/*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
