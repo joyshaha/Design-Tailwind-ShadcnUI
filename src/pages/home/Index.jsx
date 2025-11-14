@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 import {
   MapPinIcon,
@@ -60,7 +61,9 @@ function Index() {
     <div className="container max-w-full m-0 p-0">
       <header className="bg-white p-4 border-b sticky top-0 left-0 right-0 z-50 shadow-sm">
         <nav className="flex justify-between items-center container mx-auto">
-          <img src={Logo} alt="Food Delivery Logo" />
+          <Link to="/tranzo">
+            <img src={Logo} alt="Food Delivery Logo" />
+          </Link>
           <div>
             <p className="text-lg font-bold flex items-center gap-3">
               Deliver to:{" "}

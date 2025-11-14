@@ -1,15 +1,21 @@
-import React from 'react'
-import { Button } from "@/components/ui/button";
 import tranzoLogo from "@/assets/tranzo.png";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
 
 function TranzoLandingPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-[linear-gradient(to_bottom,white,#eef1ff)]">
       {/* Logo Section */}
       <div className="flex flex-col items-center mb-8">
-        <div className="flex items-center gap-2">
-          <img src={tranzoLogo} alt="Tranzo Logo" className="w-48 h-20 object-contain" />
+        <div className="bg-white border-2 border-white rounded-lg ring-4 ring-red-100 ring-offset-2 flex items-center gap-2">
+          <Link to="/">
+            <img
+              src={tranzoLogo}
+              alt="Tranzo Logo"
+              className="w-48 h-20 object-contain"
+            />
+          </Link>
           {/* <div className="w-6 h-6 bg-linear-to-tr from-indigo-600 to-purple-600 rounded-sm rotate-12" />
           <h1 className="text-2xl font-semibold text-gray-800">Tranzo</h1> */}
         </div>
@@ -54,7 +60,7 @@ function TranzoLandingPage() {
         <Badge variant="destructive">Default</Badge>
       </div>
     </div>
-  )
+  );
 }
 
-export default TranzoLandingPage
+export default TranzoLandingPage;
