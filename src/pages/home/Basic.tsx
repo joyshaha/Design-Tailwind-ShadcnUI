@@ -181,7 +181,7 @@ export function Basic(): JSX.Element {
       <div className="container m-0 p-0 min-w-full">
         {/* Header */}
         <header className="bg-white px-2 py-3 sm:p-4 border-b sticky top-0 left-0 right-0 z-50 shadow-sm">
-          <nav className="flex flex-wrap items-center justify-between w-full max-w-7xl mx-auto">
+          <nav className="flex items-center justify-between w-full max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center gap-2">
               <Link
                 to="/tranzo"
@@ -200,7 +200,7 @@ export function Basic(): JSX.Element {
               <p className="text-sm sm:text-base md:text-lg font-bold flex items-center gap-2 md:gap-3">
                 Deliver to:{" "}
                 <MapPinIcon
-                  className="w-4 h-4 md:h-6 text-yellow-500"
+                  className="w-5 h-5 md:w-6 md:h-6 text-yellow-500"
                   strokeWidth={4}
                 />
                 <span className="text-[#424242] font-normal">
@@ -213,21 +213,12 @@ export function Basic(): JSX.Element {
             </div>
             <div className="flex gap-2 sm:gap-3 md:gap-6 ml-auto">
               {/* Search button visible on sm and up, icon-only on xs */}
-              <button
-                className="flex sm:hidden items-center justify-center text-[#424242]"
-                aria-label="Search Food"
-              >
+              <button className="flex text-sm md:text-base lg:text-lg font-bold text-[#424242] items-center gap-2">
                 <SearchIcon
-                  className="w-5 h-5 text-yellow-400"
+                  className="w-5 h-5 md:w-6 md:h-6 text-yellow-400"
                   strokeWidth={3.5}
                 />
-              </button>
-              <button className="hidden sm:flex text-sm md:text-base lg:text-lg font-bold text-[#424242] items-center gap-2">
-                <SearchIcon
-                  className="w-4 h-5 text-yellow-400"
-                  strokeWidth={3.5}
-                />
-                <span>Search Food</span>
+                <span className="hidden sm:block xs:inline">Search Food</span>
               </button>
               <Button
                 variant="default"
@@ -578,7 +569,7 @@ export function Basic(): JSX.Element {
             <p className="text-xl md:text-2xl font-bold mb-4 md:mb-6 lg:mb-8 w-full">
               Our top cities
             </p>
-            <div className="mb-6 md:mb-8 lg:mb-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 w-full border-b-2 border-[#424242] pb-6 md:pb-8 lg:pb-12 px-0">
+            <div className="mb-6 md:mb-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 w-full border-b-2 border-[#424242] pb-6 md:pb-8 lg:pb-12 px-0">
               {[...Array(5)].map((_, colIdx) => (
                 <div
                   key={colIdx}
@@ -597,12 +588,9 @@ export function Basic(): JSX.Element {
                 </div>
               ))}
             </div>
-            <div className="mb-6 md:mb-8 lg:mb-12 flex flex-col lg:flex-row w-full border-b-2 border-[#424242] pb-6 md:pb-8 lg:pb-12 px-0 gap-6 md:gap-8 lg:gap-12 xl:gap-16">
+            <div className="mb-6 md:mb-8 flex flex-col lg:flex-row w-full border-b-2 border-[#424242] pb-6 md:pb-8 px-0 gap-6 md:gap-8">
               {/* Left: Company, Contact, Legal (60%) */}
-              <div
-                className="flex-1 flex flex-col sm:flex-row gap-6 md:gap-10 lg:gap-12 w-full max-w-full"
-                style={{ flexBasis: "60%" }}
-              >
+              <div className="flex-1 flex flex-col sm:flex-row gap-6 md:gap-10 lg:gap-12 w-full max-w-full">
                 {/* Company Info */}
                 <div className="flex flex-col items-start gap-2 md:gap-3 min-w-[120px] flex-1">
                   <p className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4 lg:mb-6">
@@ -702,7 +690,7 @@ export function Basic(): JSX.Element {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col-reverse sm:flex-row items-center justify-between w-full gap-3 md:gap-4 pt-4 md:pt-6">
+            <div className="flex flex-col-reverse sm:flex-row items-center justify-between w-full gap-3 md:gap-4">
               <p className="text-xs md:text-sm lg:text-base text-[#BBBBBB] text-center sm:text-start">
                 All rights reserved
                 <span className="text-white"> © Food Delivery, 2025</span>.
